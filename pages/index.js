@@ -9,7 +9,7 @@ export default function Home({ allProducts }) {
 	return (
 		<>
 			<Head>
-				<title>Plants | Home</title>
+				<title>DEMO | e-commerce</title>
 			</Head>
 			<div className="container">
 				<h2 className={styles.title}>
@@ -63,7 +63,7 @@ export async function getStaticProps() {
 	});
 	
 	const allProducts = data.data.products;
-	console.log(data.data)
+	// console.log(data.data)
 	// console.log(allProducts)
 	
 	return {

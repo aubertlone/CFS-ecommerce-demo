@@ -12,7 +12,7 @@
 
 @media (max-width: 500px) {
 	.products_container {
-		grid-template-columns: .25fr;
+		grid-template-columns: 1fr;
 		
 	}
 }

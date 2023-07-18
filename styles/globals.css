@@ -19,6 +19,7 @@ a {
 
 .container {
 	padding: 0 150px;
+	align-items: center;
 }
 
 @keyframes GradientBackground {
