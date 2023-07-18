@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css';
 
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
@@ -63,8 +63,9 @@ export async function getStaticProps() {
 	});
 	
 	const allProducts = data.data.products;
+	console.log(data.data)
+	// console.log(allProducts)
 	
-	console.log(allProducts)
 	return {
 		props: {
 			allProducts,
