@@ -5,13 +5,15 @@
 	width: 100%;
 	gap: 40px;
 	padding: 0 250px;
+	
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.single_container {
-		padding: 0 50px;
+		padding:  50px;
 		flex-direction: column;
 	}
+	
 }
 
 .left_section {
@@ -25,8 +27,8 @@
 }
 
 .left_img {
-	width: 100%;
-	height: 60%;
+	width: 90%;
+	height: 100%;
 	object-fit: contain;
 }
 

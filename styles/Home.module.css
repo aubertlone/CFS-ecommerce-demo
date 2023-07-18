@@ -12,15 +12,39 @@
 
 @media (max-width: 500px) {
 	.products_container {
-		grid-template-columns: 1fr;
+		grid-template-columns: .25fr;
+		
 	}
 }
 
+.bin {
+	background-color: #2435f4d3;
+	color: #fff;
+	display: inline-block;
+	padding: 1px;
+	margin: 5px 0;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	border: none;
+	font-size: small;
+
+	
+}
+
+.bin:hover {
+	background-color: #45876d;
+
+	background: radial-gradient(circle, #579df8, #FFFFFF, #7075fc,#FFFFFF, #466dfa);
+	background-size: 800% 800%;
+	animation: GradientBackground 22s ease infinite;
+}
 .product_card {
 	padding: 20px;
 	position: relative;
 	height: 400px;
 	width:400px;
+	padding-bottom: 50px;
 }
 .product_image {
     width: 100%;
@@ -44,4 +68,5 @@
 
 .product_content h3 {
 	margin: 5px 0;
+	
 }

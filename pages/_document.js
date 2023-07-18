@@ -4,6 +4,7 @@ export default function Document() {
 	return (
 		<Html>
 			<Head>
+			<link rel="icon" href="https://www.cfsbrands.com/favicon-32x32.png" sizes="any" />
 				<link rel="preconnect" href="<https://app.snipcart.com>" />
 				<link rel="preconnect" href="<https://cdn.snipcart.com>" />
 				<link
