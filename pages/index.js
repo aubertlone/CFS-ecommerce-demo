@@ -13,7 +13,7 @@ export default function Home({ allProducts }) {
 			</Head>
 			<div className="container">
 				<h2 className={styles.title}>
-					All Products <span>🌿</span>
+					All Products 
 				</h2>
 				<div className={styles.products_container}>
 					{allProducts.map((product) => {
