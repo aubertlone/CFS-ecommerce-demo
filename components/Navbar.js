@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 import styles from '../styles/components/Navbar.module.css';
 
+
+
 const Navbar = () => {
+	
 	return (
 		<nav className={styles.navbar}>
 			<Link href="/">

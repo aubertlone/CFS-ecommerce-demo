@@ -21,6 +21,21 @@ a {
 	padding: 0 250px;
 }
 
+@keyframes GradientBackground {
+	0% {
+	  background-position: 0% 50%;
+	}
+  
+	50% {
+	  background-position: 100% 50%;
+	}
+  
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+  
+
 @media (max-width: 500px) {
 	.container {
 		padding: 0 50px;
@@ -44,7 +59,7 @@ img:hover {
 }
 
 .btn {
-	background-color: #5aa388;
+	background-color: #2435f4d3;
 	color: #fff;
 	display: inline-block;
 	padding: 15px 20px;
@@ -53,8 +68,15 @@ img:hover {
 	cursor: pointer;
 	transition: all 0.5s ease-in-out;
 	border: none;
+	font-size: large;
+	font-weight: 700;
+	
 }
 
 .btn:hover {
 	background-color: #45876d;
+
+	background: radial-gradient(circle, #579df8, #FFFFFF, #7075fc,#FFFFFF, #466dfa);
+	background-size: 800% 800%;
+	animation: GradientBackground 22s ease infinite;
 }

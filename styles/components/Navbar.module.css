@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -8,7 +8,28 @@
 	padding: 20px 250px;
 	font-size: 20px;
 	font-weight: 600;
-}
+} */
+
+.navbar {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	/* background: conic-gradient(#1c1ceccb 0%, #ff7e5f 25%, #feb47b 50%, #ff7e5f 75%, #1c1ceccb 100%); */
+	  /*Fallback if gradeints don't work */
+	  background: #9b59b6;
+	  /*Linear gradient... */
+	  background: 
+		radial-gradient(
+		 at center, #3498db, #9b59b6
+		);
+	color: #fff;
+	padding: 10px 250px;
+	font-size: 25px;
+	font-weight: 600;
+	animation: GradientBackground 22s ease infinite;
+  }
+  
 
 /* .logo_img {
 	padding: 30px;
@@ -33,9 +54,9 @@
   } */
 
   .logo_img {
-	padding: 15px;
+	padding: 25px;
 	border-radius: 10px;
-	background: radial-gradient(circle, #FFFFFF, #4B52FF, #FFFFFF, #FFFFFF);
+	background: radial-gradient(circle, #FFFFFF, #FFFFFF, #8d91fe,#FFFFFF, #FFFFFF);
 	background-size: 800% 800%;
 	animation: GradientBackground 22s ease infinite;
   }
