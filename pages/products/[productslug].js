@@ -43,7 +43,7 @@ export default singleproduct;
 
 export async function getStaticProps({ params }) {
 	const client = new ApolloClient({
-		uri: 'https://api-us-east-1.graphcms.com/v2/cl2cupjxo4izz01z8fcm26gxf/master',
+		uri: 'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clk79spfd0l7w01urb7gc30w0/master',
 		cache: new InMemoryCache(),
 	});
 
@@ -70,7 +70,7 @@ export async function getStaticProps({ params }) {
 	});
 
 	const product = data.data.product;
-
+console.log(product)
 	return {
 		props: {
 			product,
@@ -80,14 +80,14 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 	const client = new ApolloClient({
-		uri: 'https://api-us-east-1.graphcms.com/v2/cl2cupjxo4izz01z8fcm26gxf/master',
+		uri: 'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clk79spfd0l7w01urb7gc30w0/master',
 		cache: new InMemoryCache(),
 	});
 
 	const data = await client.query({
 		query: gql`
 			query ProductsQuery {
-				products {
+				products (first: 25){
 					id
 					name
 					slug

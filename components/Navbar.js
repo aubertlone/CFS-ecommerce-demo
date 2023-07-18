@@ -9,7 +9,7 @@ const Navbar = () => {
 				<a>
 					<div className={styles.logo}>
 						<p>
-							PLANTS <span className={styles.logo_span}>☘</span>
+							 <img object-fit="contain" src="https://www.cfsbrands.com/images/CFS-Pri-Logo-FullColor-CMYK.svg" className={styles.logo_img}></img>
 						</p>
 					</div>
 				</a>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
+import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
@@ -22,7 +22,7 @@ export default function Home({ allProducts }) {
 								<Link href={`products/${product.slug}`}>
 									<a>
 										<div className={styles.product_img}>
-											<img src={product.image.url} alt={product.name} />
+											<img  src={product.image.url} alt={product.name} className={styles.product_image}  />
 										</div>
 									</a>
 								</Link>
@@ -51,14 +51,14 @@ export default function Home({ allProducts }) {
 
 export async function getStaticProps() {
 	const client = new ApolloClient({
-		uri: 'https://api-us-east-1.graphcms.com/v2/cl2cupjxo4izz01z8fcm26gxf/master',
+		uri: 'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clk79spfd0l7w01urb7gc30w0/master',
 		cache: new InMemoryCache(),
 	});
 
 	const data = await client.query({
 		query: gql`
-			query ProductsQuery {
-				products {
+			query Products {
+				products(first: 25) {   
 					id
 					name
 					slug
@@ -70,9 +70,10 @@ export async function getStaticProps() {
 			}
 		`,
 	});
-
+	
 	const allProducts = data.data.products;
-
+	
+	console.log(allProducts)
 	return {
 		props: {
 			allProducts,
